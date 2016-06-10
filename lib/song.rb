@@ -45,15 +45,15 @@ class Song
   # Custom constructors from file name
   def self.new_from_filename(filename)
     array = filename.split(/[-.]+/)
-    new_song = self.new_by_name(array[1].lstrip.rstrip)
-    new_song.artist_name = array[0].lstrip.rstrip
+    new_song = self.new_by_name(array[1].strip)
+    new_song.artist_name = array[0].strip
     new_song
   end
 
   def self.create_from_filename(filename)
     array = filename.split(/[-.]+/)
-    new_song = self.create_by_name(array[1].lstrip.rstrip)
-    new_song.artist_name = array[0].lstrip.rstrip
+    new_song = self.create_by_name(array[1].strip)
+    new_song.artist_name = array[0].strip
     new_song
   end
 
